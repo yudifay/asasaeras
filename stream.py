@@ -7,7 +7,7 @@ import json
 
 st.title("GSC Submiter by FayBB")
 st.write("Sebagai contoh, masukkan https://www.tutorialelektronik.my.id/ (WEB TERDAFTAR)")
-st.write("Sebagai contoh, masukkan https://www.youtube.com/ (WEB TERDAFTAR)")
+st.write("Sebagai contoh, masukkan https://www.youtube.com/ (WEB TIDAK TERDAFTAR)")
 st.write("Hanya web yang terdaftar saya yang bisa submit dan berhasil")
 
 
@@ -34,7 +34,7 @@ def generate_article(url):
 # return "This is a test article generated without any API calls."
 
 
-url = st.text_input("Enter a URL.....")
+url = st.text_input("Masukkan URL Anda.....")
 submit_button = st.button(
     label="Submit URL",
     help="Click to Submit URL",
