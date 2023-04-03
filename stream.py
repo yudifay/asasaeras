@@ -10,7 +10,7 @@ st.title("GSC Submiter by FayBB")
 
 
 def generate_article(url):
-    JSON_KEY_FILE = "/home/fay/Documents/Python/GoogleIndexing/fayid.json"
+    JSON_KEY_FILE = "fayid.json"
     SCOPES = ["https://www.googleapis.com/auth/indexing"]
 
     credentials = ServiceAccountCredentials.from_json_keyfile_name(
