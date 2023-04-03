@@ -1,5 +1,4 @@
 from unittest import result
-from urllib import response
 import streamlit as st
 from oauth2client.service_account import ServiceAccountCredentials
 import httplib2
@@ -27,8 +26,7 @@ def generate_article(url):
         ENDPOINT, method="POST", body=json_ctn)
     result = json.loads(content.decode())
 
-    print(result)
-    return result
+    return response
 
 # return "This is a test article generated without any API calls."
 
@@ -43,4 +41,7 @@ submit_button = st.button(
 if submit_button:
     with st.spinner("Submit URL..."):
         article = generate_article(url)
-        st.write("Sukses Kirim Link:", url)
+        if article.status == 200:
+            st.write("Sukses Kirim Link:", url)
+        else:
+            st.write("Website Tidak Terdaftar")
